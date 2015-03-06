@@ -46,6 +46,7 @@ class Command(NoArgsCommand):
         mapping = [
             [self.create_site, ["django.contrib.sites"]],
             [self.create_user, ["django.contrib.auth"]],
+            [self.translation_fields, ["modeltranslation"]],
             [self.create_pages, ["mezzanine.pages", "mezzanine.forms",
                                  "mezzanine.blog", "mezzanine.galleries"]],
             [self.create_shop, ["cartridge.shop"]],
@@ -137,3 +138,20 @@ class Command(NoArgsCommand):
             if self.verbosity >= 1:
                 print("\nFaking initial migrations ...\n")
             migrate.Command().execute(fake=True)
+
+    def translation_fields(self):
+        try:
+            from modeltranslation.management.commands \
+                    import (update_translation_fields as update_fields,
+                            sync_translation_fields as create_fields)
+        except ImportError:
+            return
+        update = self.confirm(
+            "\nDjango-modeltranslation is installed for "
+            "this project and you have specified to use "
+            "i18n.\nWould you like to update translation "
+            "fields from the default ones? (yes/no): ")
+        if update:
+            create_fields.Command().execute(
+                    verbosity=self.verbosity, interactive=False)
+            update_fields.Command().execute(verbosity=self.verbosity)

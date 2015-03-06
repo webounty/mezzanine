@@ -40,8 +40,8 @@ class ConfTests(TestCase):
         for conn in connections.all():
             # If using in-memory sqlite databases, pass the connections to
             # the server thread.
-            if (conn.vendor == 'sqlite'
-                    and conn.settings_dict['NAME'] == ':memory:'):
+            if (conn.vendor == 'sqlite' and
+                    conn.settings_dict['NAME'] == ':memory:'):
                 # Explicitly enable thread-shareability for this connection
                 conn._old_allow_thread_sharing = conn.allow_thread_sharing
                 conn.allow_thread_sharing = True
@@ -129,3 +129,10 @@ class ConfTests(TestCase):
                                value="A unicode value")
         settings.use_editable()
         self.assertEqual(settings.BYTES_TEST_SETTING, b"A unicode value")
+
+    def test_modeltranslation_configuration(self):
+        """
+        Test that modeltranslation is properly configured in settings.
+        """
+        if settings.USE_MODELTRANSLATION:
+            self.assertTrue(settings.USE_I18N)

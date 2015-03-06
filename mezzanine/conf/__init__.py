@@ -22,7 +22,8 @@ registry = {}
 
 
 def register_setting(name=None, label=None, editable=False, description=None,
-                     default=None, choices=None, append=False):
+                     default=None, choices=None, append=False,
+                     translatable=False):
     """
     Registers a setting that can be edited via the admin. This mostly
     equates to storing the given args as a dict in the ``registry``
@@ -70,7 +71,8 @@ def register_setting(name=None, label=None, editable=False, description=None,
         setting_type = type(default)
     registry[name] = {"name": name, "label": label, "editable": editable,
                       "description": description, "default": default,
-                      "choices": choices, "type": setting_type}
+                      "choices": choices, "type": setting_type,
+                      "translatable": translatable}
 
 
 class Settings(object):
@@ -200,11 +202,15 @@ class Settings(object):
 
 mezz_first = lambda app: not app.startswith("mezzanine.")
 for app in sorted(django_settings.INSTALLED_APPS, key=mezz_first):
-    module = import_module(app)
     try:
-        import_module("%s.defaults" % app)
-    except:
-        if module_has_submodule(module, "defaults"):
-            raise
+        module = import_module(app)
+    except ImportError:
+        pass
+    else:
+        try:
+            import_module("%s.defaults" % app)
+        except:
+            if module_has_submodule(module, "defaults"):
+                raise
 
 settings = Settings()
