@@ -297,6 +297,7 @@ You can also add modules to the `Mezzanine Grid on djangopackages.com`_.
 * `open-helpdesk`_ A helpdesk app built with Mezzanine.
 * `mezzanine-invites`_ Allow site registration via alphanumeric invite codes.
 * `ansible-mezzanine`_ Full pipeline (dev, staging, production) deployment of Mezzanine using `Ansible`_.
+* `mezzanine-modal-announcements`_ Popup announcements for Mezzanine websites via Bootstrap modals.
 
 
 Donating
@@ -570,6 +571,11 @@ Sites Using Mezzanine
 * `TerraHub <http://terrahub.org/>`_
 * `djangoproject.jp <http://djangoproject.jp/>`_
 * `Joshua Ginsberg <http://starboard.flowtheory.net>`_
+* `Savant Digital <http://www.savantdigital.net>`_
+* `weBounty <https://webounty.com>`_
+* `Oxfam America <http://www.oxfamamerica.org/>`_
+* `Artivest <https://artivest.co/>`_
+
 
 Quotes
 ======
@@ -744,6 +750,7 @@ Quotes
 .. _`open-helpdesk`: https://github.com/simodalla/open-helpdesk
 .. _`mezzanine-invites`: https://github.com/averagehuman/mezzanine-invites
 .. _`ansible-mezzanine`: https://github.com/keithadavidson/ansible-mezzanine
+.. _`mezzanine-modal-announcements`: https://github.com/joshcartme/mezzanine-modal-announcements
 
 
 .. PEOPLE WITH QUOTES
