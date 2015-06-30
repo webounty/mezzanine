@@ -208,13 +208,15 @@ be translated into multiple langagues to create multi-lingual sites.
 Consult Mezzanine's documentation on `Multi-lingual sites`_ for more
 information.
 
-Third-Party Modules
-===================
+Third-Party Plug-Ins
+====================
 
-The following modules have been developed outside of Mezzanine. If you
-have developed a module to integrate with Mezzanine and would like to
-list it here, send an email to the `mezzanine-users`_ mailing list.
-You can also add modules to the `Mezzanine Grid on djangopackages.com`_.
+The following plug-ins have been developed outside of Mezzanine. If you
+have developed a plug-in to integrate with Mezzanine and would like to
+list it here, send an email to the `mezzanine-users`_ mailing list, or
+better yet, fork the project and create a pull request with your
+plug-in added to the list below. We also ask that you add it to the
+`Mezzanine Grid on djangopackages.com`_.
 
 * `Cartridge`_ - ecommerce for Mezzanine.
 * `Drum`_ - A `Hacker News`_ / `Reddit`_ clone powered by Mezzanine.
@@ -293,11 +295,19 @@ You can also add modules to the `Mezzanine Grid on djangopackages.com`_.
   platform.
 * `mezzanine-bsbanners`_ - Add `Twitter Bootstrap`_ Carousels and
   Jumbotrons to Mezzanine.
-* `mezzanine-business-theme`_ Starter business theme for Mezzanine.
-* `open-helpdesk`_ A helpdesk app built with Mezzanine.
-* `mezzanine-invites`_ Allow site registration via alphanumeric invite codes.
-* `ansible-mezzanine`_ Full pipeline (dev, staging, production) deployment of Mezzanine using `Ansible`_.
-* `mezzanine-modal-announcements`_ Popup announcements for Mezzanine websites via Bootstrap modals.
+* `mezzanine-business-theme`_ - Starter business theme for Mezzanine.
+* `open-helpdesk`_ - A helpdesk app built with Mezzanine.
+* `mezzanine-invites`_ - Allow site registration via alphanumeric
+  invite codes.
+* `ansible-mezzanine`_ - Full pipeline (dev, staging, production)
+  deployment of Mezzanine using `Ansible`_.
+* `mezzanine-modal-announcements`_ - Popup announcements for Mezzanine
+  websites via Bootstrap modals.
+* `mezzanine-buffer`_ - `Buffer`_ integration for Mezzanine.
+* `mezzanine-slideshows`_ - Allows placement of Mezzanine galleries
+  within other Mezzanine pages as slideshows.
+* `mezzanine-onepage`_ - Design helper for single-page Mezzanine sites.
+* `mezzanine-api`_ - RESTful web API for Mezzanine.
 
 
 Donating
@@ -310,7 +320,7 @@ Support
 =======
 
 To report a security issue, please send an email privately to
-`security@jupo.org`_. This gives us a chance to fix the issue and
+`core-team@mezzaninecms.com`_. This gives us a chance to fix the issue and
 create an official release prior to the issue being made
 public.
 
@@ -335,6 +345,12 @@ to the `Django Code of Conduct`_.
 
 Sites Using Mezzanine
 =====================
+
+Got a site built with Mezzanine? You can add it to the gallery on
+the `Mezzanine project page`_ by adding it to the list below - just
+fork the project and create a pull request. Please omit the trailing
+slash in the URL, as we manually add that ourselves to feature
+certain sites.
 
 * `Citrus Agency <http://citrus.com.au/>`_
 * `Mezzanine Project <http://mezzanine.jupo.org>`_
@@ -575,6 +591,15 @@ Sites Using Mezzanine
 * `weBounty <https://webounty.com>`_
 * `Oxfam America <http://www.oxfamamerica.org/>`_
 * `Artivest <https://artivest.co/>`_
+* `Dark Matter Sheep <http://darkmattersheep.net>`_
+* `Mission Healthcare <http://homewithmission.com>`_
+* `Two Forty Fives <http://twofortyfives.com/>`_
+* `Rodeo Austin <http://rodeoaustin.com/>`_
+* `Krisers <http://krisers.com/>`_
+* `Intentional Creation <http://intentionalcreation.com/>`_
+* `BytesArea <http://www.bytesarea.com>`_
+* `Debra Solomon <http://www.debrasolomon.com>`_
+* `Pampanga Food Company <http://pampangafood.com>`_
 
 
 Quotes
@@ -661,7 +686,7 @@ Quotes
 .. _`django-modeltranslation`: http://django-modeltranslation.readthedocs.org
 .. _`Multi-lingual sites`: http://mezzanine.jupo.org/docs/multi-lingual-sites.html
 .. _`mezzanine-users`: http://groups.google.com/group/mezzanine-users/topics
-.. _`security@jupo.org`: mailto:security@jupo.org?subject=Mezzanine+Security+Issue
+.. _`core-team@mezzaninecms.com`: mailto:core-team@mezzaninecms.com?subject=Mezzanine+Security+Issue
 .. _`GitHub issue tracker`: http://github.com/stephenmcd/mezzanine/issues
 .. _`#mezzanine IRC channel`: irc://irc.freenode.net/mezzanine
 .. _`Freenode`: http://freenode.net
@@ -751,6 +776,11 @@ Quotes
 .. _`mezzanine-invites`: https://github.com/averagehuman/mezzanine-invites
 .. _`ansible-mezzanine`: https://github.com/keithadavidson/ansible-mezzanine
 .. _`mezzanine-modal-announcements`: https://github.com/joshcartme/mezzanine-modal-announcements
+.. _`mezzanine-buffer`: https://github.com/caffodian/mezzanine-buffer
+.. _`Buffer`: http://buffer.com
+.. _`mezzanine-slideshows`: https://github.com/philipsouthwell/mezzanine-slideshows
+.. _`mezzanine-onepage`: https://github.com/lucmilland/mezzanine-onepage
+.. _`mezzanine-api`: https://github.com/gcushen/mezzanine-api
 
 
 .. PEOPLE WITH QUOTES

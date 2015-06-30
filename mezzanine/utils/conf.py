@@ -204,6 +204,12 @@ def set_dynamic_settings(s):
         s["USE_I18N"] = True
         s["LANGUAGES"] = [(s["LANGUAGE_CODE"], "")]
 
+    # Ensure required middleware is installed, otherwise admin
+    # becomes inaccessible.
+    mw = "django.middleware.locale.LocaleMiddleware"
+    if s["USE_I18N"] and mw not in s["MIDDLEWARE_CLASSES"]:
+        prepend("MIDDLEWARE_CLASSES", mw)
+
     # Revert tuple settings back to tuples.
     for setting in tuple_list_settings:
         s[setting] = tuple(s[setting])
@@ -220,3 +226,13 @@ def set_dynamic_settings(s):
         elif shortname == "mysql":
             # Required MySQL collation for tests.
             s["DATABASES"][key]["TEST_COLLATION"] = "utf8_general_ci"
+
+
+def real_project_name(project_name):
+    """
+    Used to let Mezzanine run from its project template directory, in which
+    case "{{ project_name }}" won't have been replaced by a real project name.
+    """
+    if project_name == "{{ project_name }}":
+        return "project_name"
+    return project_name
